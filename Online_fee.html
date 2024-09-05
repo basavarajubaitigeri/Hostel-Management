@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+        
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Online fees payment</title>
+  <style>
+    html{     
+    }
+  
+    #nav-items{
+    color:auto;
+    }
+    #dropdown{
+      color:auto;
+      margin-top:10px;
+    }
+    #nav{
+        padding:15px 15px;
+        position:absolute;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(100px);
+        right:0%;
+        left:0px;
+        background-color:rgba(255, 255, 255, 0.3);
+        background-color:#E7F2F8;
+        display:block;
+    }
+    #nav-brand{
+       color:black;
+        font-size:x-large;
+        float:left;
+        font-weight:bold;
+        font-style:arial;
+        border-radius:5px;
+        padding:10px 10px;
+        transition:0.3s linear;
+    }
+   .dropdown{
+    margin-top:-10px;
+   }
+   #menu{
+    position:absolute;
+    top:15%;
+    color:black;
+    left:0px;
+    right:0px;
+   }
+   .col{  
+    margin-left:10px;
+    width:auto;
+    height:auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(100px);
+    background-color:rgba(255, 255, 255, 0.3);
+   }
+   form{
+    -webkit-box-shadow: 10px 10px 6px 0px rgba(66,47,66,1);
+      -moz-box-shadow: 10px 10px 6px 0px rgba(66,47,66,1);
+      box-shadow: 10px 10px 6px 0px grey;
+      border-radius: 10px;
+      padding:20px 20px;
+      align-self: center;
+      background-color:#E7F2F8;
+
+   }
+   img{
+    width:100px;
+    height:100px;
+   }
+   ul{
+    z-index: 1;
+   }
+   #main{
+    margin-top:10%;
+   }
+   #submit{
+    background-color:rgb(212, 51, 51);
+    color:white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:7px 10px;
+    border-radius:10px;
+    border:none;
+    transition:linear 0.3s;
+   }
+   #submit:hover{
+    opacity:0.8;
+   }
+   
+
+
+  </style>
+</head>
+<body>
+
+          <nav class="navbar navbar-expand-lg" id="nav">
+            <div class="container-fluid" id="container">
+              <a class="navbar-brand" href="#" id="nav-brand">Hostel Management</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Dashboard.html" id="nav-items">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact" id="nav-items" >About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"id="nav-items" >Contact </a>
+                  </li>
+                  <li id="nav-items">
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown">
+                        Menu
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Student_register.html">Student Register</a></li>
+                        <li><a class="dropdown-item" href="staff_data_management.html">Staff data</a></li>
+                        <li><a class="dropdown-item" href="Online_complain.html">Complaint register</a></li>
+                        <li><a class="dropdown-item" href="Room_alloaction.html">Room alloaction</a></li>
+                        <li><a class="dropdown-item" href="Visitor_record.html">visitor record</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                    </div> 
+                </ul>
+              </div>
+              
+            </nav>
+            <br>
+   <div class="container" id="main">
+        <form action="onlinefee.php" method="post">
+                        <label for="exampleFormControlInput1" class="form-label">Student ID</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"name="studentid" placeholder="Enter the student ID" required >
+                        <label for="exampleFormControlInput1" class="form-label">Student Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the name"name="name" required >
+                        <label for="exampleFormControlInput1" class="form-label">Branch</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the branch" name="branch" required>
+                        <label for="exampleFormControlInput1" class="form-label">UTR ID number of transaction</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the UTR CODE" name="transaction_ID" required>
+                        <label for="exampleFormControlInput1" class="form-label">Amount </label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the amount you paid" name="amount" required >
+                        <div id="emailHelp" class="form-text">Click on submit only when payment is completed</div>
+                        
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                            Methods of the transaction
+                        </button><br>
+                        
+
+                            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="staticBackdropLabel">Transaction methods</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                Mobile number:9019786178
+                                </div>
+                                <div>
+                                    QR code <br>
+                                <img src="images/qr2.jpg">
+                                </div>
+                            </div>
+                            </div>
+                       <br>
+
+                        <input type="submit" value="Submit" id="submit"> 
+                                
+                      
+                        
+                           
+                      
+        </form>
+   </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
