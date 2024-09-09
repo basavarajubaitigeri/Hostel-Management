@@ -8,7 +8,7 @@
         $sql="INSERT INTO `Login`(`Email`,`password`,`Phone`) VALUES('$Email','$pass','$phone')";
         $query = mysqli_query($conn,$sql);
         if($query){
-            header('location:index.html');
+            header('location:Dashboard.html');
         }
         else{
             header('location:Registration.html');

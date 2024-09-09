@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Hostel management</title>
+
+        <style>
+           
+
+form{
+    height: 150px;
+    width: 400px;
+    
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    padding: 50px 35px;
+}
+.raju{
+    background-color: #f3f3f7;
+    height: 35px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10;
+    
+}
+
+#a{
+    border-radius: 20px;
+    margin: 90px;
+    padding: 17px;
+    background-color: #50a5f4;
+    color: rgba(5, 1, 1, 0.949);
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 100px;
+
+}
+#a:hover{
+    background-color:rgba(62, 240, 163, 0.949);
+}
+.b{
+    height: 100px;
+    width: 400px;
+    text-align: center;
+    
+}
+.c{
+    font-size: 30px;
+    color: #090303;
+    
+}
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+.button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    
+}
+
+
+        </style>
+        
+    </head>
+    <body><img height="1000px" width="1500px" src="images/manadhe.jpg" alt="">
+        
+<!-- HTML -->
+ 
+<form  id="myForm">
+    <center>
+    <div class="c">
+    <label for="Student">Student</label>
+    <input type="radio" id="Student" name="option" value="Student">
+    <label for="Admin">Admin</label>
+    <input type="radio" id="Admin" name="option" value="Admin">
+     </div></center>
+     <center>
+      <button name="submit" type="submit" class="button">Submit</button>
+    
+      </center>
+  </form>
+  
+<!-- JavaScript -->
+<script>
+    const form = document.getElementById('myForm');
+  
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // prevent default form submission
+  
+      const selectedOption = document.querySelector('input[name="option"]:checked').value;
+  
+      if (selectedOption === 'Student') {
+        window.location.href = 'Registration.html'; // redirect to Register.html
+      } else if (selectedOption === 'Admin') {
+        window.location.href = 'index.html'; // redirect to index.ht
+      }
+    });
+  </script>
+    </body>
+</html>
