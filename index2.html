@@ -1,10 +1,9 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Design by foolishdeveloper.com -->
-    <title>Hostel management</title>
+    <title>Login</title>
  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -96,21 +95,20 @@ input{
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
-    margin-bottom:-20px;
 }
 ::placeholder{
     color: #e5e5e5;
 }
 .button{
-    margin-top: 50px;
+    margin-top:60px;
     width: 100%;
-    background-color: #ffffff;
+    background-color:white;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
-    
+    cursor: pointer;
 }
 .social{
   margin-top: 30px;
@@ -142,19 +140,17 @@ input{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form  method="post" action="registration.php">
-        <h3>Register here</h3>
+    <form action="admin.html" method="post">
+        <h3>Login Here</h3>
 
         <label for="username">Email</label>
-        <input type="email" placeholder="Email" id="username" name="Email" required>
-        <label for="username">pin number</label>
-        <input type="text" placeholder="Enter pin.no" id="username" name="phone" required>
+        <input type="email" placeholder="Enter your email" id="username" name="Username" required>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" required>
-
-        <button name="submit" type="submit" class="button">Submit</button>
-        
+        <input type="password" placeholder="Password" id="password" name="Password" required>
+        <button class="button" name="submit" type="submit"> Log in </button>
     </form>
+    
+      
 </body>
 </html>
